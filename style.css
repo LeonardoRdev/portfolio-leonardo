@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,12 +11,14 @@
 /* HEADER */
 
 header {
+    position: sticky;
+    top: 0;
     display: flex;
-    background-color: #cfcfcf;
+    background-color: #fff;
     justify-content: space-between;
     align-items: center;
     padding: 25px 150px 25px 100px;
-    box-shadow: 1px 1px 15px;
+    box-shadow: 0 0 8px 5px #0008;
 }
 
 header h3 {
@@ -34,11 +40,14 @@ a.navegacao {
 
 /* MAIN */
 
+/* introdução/início */
+
 main {
     margin-top: 40px;
-    width: 100vw;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 #introducao {
@@ -82,6 +91,39 @@ main {
     overflow: hidden;
 }
 
+#botoes-introducao {
+    width: 20vw;
+    display: flex;
+    margin: 20px 0 0 30px;
+    justify-content: space-around;
+    /* background-color: red; */
+}
+
+.redes-sociais-botoes {
+    padding: 5px 15px;
+}
+
+.redes-sociais-botoes a {
+    color: #000;
+}
+
 #foto-introducao img {
     width: 500px;
+}
+
+/* Sobre */
+
+#sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cfcfcf;
+    margin-top: 45px;
+    height: 200vh;
+    width: 100vw;
+}
+
+#habilidades {
+    scroll-margin-top: 150px;
+    font-size: 2em;
 }
