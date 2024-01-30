@@ -116,14 +116,41 @@ main {
 #sobre {
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: #cfcfcf;
     margin-top: 45px;
-    height: 200vh;
-    width: 100vw;
+    
+    /* align-items: center; */
+    background-color: #cfcfcf;
+    /* width: 100vw; */
+    padding: 20px;
 }
 
-#habilidades {
+#foto-sobre {
+
+    background-color: red;
+    padding: 20px;
+}
+
+#foto-sobre img {
+    width: 400px;
+}
+
+#habilidades-sobre {
     scroll-margin-top: 150px;
     font-size: 2em;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    background-color: rgb(81, 255, 0);
+    padding: 20px;
+}
+
+#itens-que-possuo-habilidades {
+    display: flex;
+    flex-wrap: wrap;
+
+    border: solid white 2px;
+    background-color: rgb(54, 156, 196);
+    padding: 10px;
 }
