@@ -114,43 +114,61 @@ main {
 /* Sobre */
 
 #sobre {
+    scroll-margin-top: -60px;
     display: flex;
     justify-content: center;
-    margin-top: 45px;
+    margin-top: 10vw;
+    width: 100vw;
+    padding: 25vh 0;
     
     /* align-items: center; */
     background-color: #cfcfcf;
-    /* width: 100vw; */
-    padding: 20px;
 }
 
 #foto-sobre {
 
-    background-color: red;
-    padding: 20px;
+    background-color: rgb(0, 225, 255);
+    padding: 15px;
 }
 
 #foto-sobre img {
-    width: 400px;
+    width: 28vw;
+}
+
+#curiosidades-sobre {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#curiosidades-sobre div p {
+    font-size: 1.5rem;
 }
 
 #habilidades-sobre {
-    scroll-margin-top: 150px;
-    font-size: 2em;
-    width: 50vw;
     display: flex;
+    align-items: center;
     flex-direction: column;
+    width: 50vw;
+    font-size: 2em;
     flex-wrap: nowrap;
+    padding: 50px 30px;
 
-    background-color: rgb(81, 255, 0);
-    padding: 20px;
+    /* background-color: rgb(81, 255, 0); */
+}
+
+#habilidades-sobre h3 {
+    margin-top: 50px;
+    font-size: 1.5em;
 }
 
 #itens-que-possuo-habilidades {
     display: flex;
     flex-wrap: wrap;
+    /* margin-top: 30px; */
 
-    border: solid white 2px;
-    background-color: rgb(54, 156, 196);
+    /* border: solid white 2px; */
+    /* background-color: rgb(54, 156, 196); */
     padding: 10px;
 }
