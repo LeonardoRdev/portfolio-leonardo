@@ -24,8 +24,11 @@ header {
     box-shadow: 0 0 8px 5px #0008;
 }
 
-header h3 {
+a#leo {
+    text-decoration: none;
+    color: #000;
     font-size: 1.5rem;
+    font-weight: 900;
 }
 
 nav {
@@ -38,10 +41,11 @@ a.navegacao {
     font-size: 1.3rem;
     color: #000;
     text-decoration: none;
+    transition: scale 0.1s;
 }
 
 a.navegacao:hover {
-    color: #346beb;
+    color: #2862e9;
     scale: 1.1;
 }
 
@@ -105,15 +109,20 @@ main {
     display: flex;
     margin: 20px 0 0 30px;
     justify-content: space-around;
-    /* background-color: red; */
 }
 
-.redes-sociais-botoes {
-    padding: 5px 15px;
+
+.redes-sociais-botoes a img {
+    width: 50px;
+    border: solid 2px #000;
+    border-radius: 100%;
+    padding: 3px;
+    box-shadow: 2px 2px 4px #000;
+    transition: scale 0.1s;
 }
 
-.redes-sociais-botoes a {
-    color: #000;
+.redes-sociais-botoes a img:hover {
+    scale: 1.10;
 }
 
 #foto-introducao img {
