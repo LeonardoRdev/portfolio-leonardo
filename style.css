@@ -226,8 +226,9 @@ main {
 
 #campo-com-projetos {
     margin-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10vh 5vw;
     width: 80%;
 
@@ -235,8 +236,8 @@ main {
 }
 
 .projeto {
-    height: 30vh;
-    /* overflow: hidden; */
+    width: 300px;
+    height: 220px;
     transition: 0.5s;
 
     background-color: rgb(79, 79, 192);
