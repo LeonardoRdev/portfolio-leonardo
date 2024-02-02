@@ -14,6 +14,7 @@ html {
 /* HEADER */
 
 header {
+    z-index: 1;
     position: sticky;
     top: 0;
     display: flex;
@@ -251,4 +252,15 @@ main {
 .projeto p {
     transition: 0.5s;
     opacity: 0;
+    text-align: center;
+}
+
+
+
+/* Contato */
+
+#espaco {
+    padding: 20vh 0;
+    width: 100%;
+    background-color: #ebebeb;
 }
