@@ -240,8 +240,6 @@ main {
     width: 300px;
     height: 220px;
     transition: 0.5s;
-
-    background-color: rgb(79, 79, 192);
 }
 
 .projeto .acessar-projeto {
@@ -249,20 +247,19 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* background-color: rgba(0, 255, 55, 0.281); */
     width: 300px;
     height: 220px;
 }
 
 .icones_para_acessar_projeto {
-    transition: 0.5s;
+    transition: scale 0.1s, opacity 0.8s;
     opacity: 0;
-    width: 65px;
+    width: 62px;
     border-radius: 10%;
 }
 
 .icones_para_acessar_projeto:hover {
-    scale: 1.05;
+    scale: 1.12;
 }
 
 
