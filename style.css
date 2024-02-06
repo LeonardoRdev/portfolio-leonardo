@@ -292,6 +292,12 @@ main {
     font-size: 2.8rem;
 }
 
+form#entre-em-contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #informacoes-do-usuario {
     margin-top: 30px;
     height: 60vh;
@@ -300,8 +306,6 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 5fr;
-
-    /* background-color: red; */
 }
 
 #informacoes-do-usuario input, #mensagem {
@@ -341,4 +345,47 @@ main {
 #botao-enviar:hover {
     cursor: pointer;
     scale: 1.05;
+}
+
+
+
+/* Footer */
+
+footer {
+    background-color: #363636;
+    padding: 10vh 0 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #fff;
+    gap: 50px 0;
+}
+
+#informacoes-contato-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px 0;
+    font-size: 1.4rem;
+}
+
+#imagens-footer {
+    display: flex;
+    gap: 0 15px;
+}
+
+#imagens-footer img {
+    border: solid 2px #000;
+    box-shadow: 2px 2px 4px #000;
+    background-color: #fff;
+    border-radius: 100%;
+    padding: 5px;
+    width: 55px;
+    transition: scale 0.1s;
+}
+
+#imagens-footer img:hover {
+    cursor: pointer;
+    scale: 1.1;
 }
