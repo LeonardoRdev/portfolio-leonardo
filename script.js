@@ -32,9 +32,12 @@ projeto.forEach(function (itemProjeto) {
 
 // Contato -> enviar mensagem
 
+tudoCerto = 0;
+
 const confirmacaoMensagemEnviada = document.querySelector("#confirmacao-mensagem-enviada");
 const botaoEnviar = document.querySelector("#botao-enviar");
 
+const inputContato = document.querySelectorAll(".input-contato");
 const nome = document.querySelector("#nome");
 const emailUsuario = document.querySelector("#email")
 const mensagem = document.querySelector("#mensagem");
@@ -46,23 +49,52 @@ function enviarEmail() {
 
     let mensagemEnviada = `Nome = ${nome.value}<br>E-mail = ${emailUsuario.value}<br>Mensagem = ${mensagem.value}`;
 
-Email.send({
-    SecureToken: "92827fa9-b34d-4a62-aca2-2bcba499560f",
-    To : 'leonardorochaconstantino@gmail.com',
-    From : "leonardorochaconstantino@gmail.com",
-    Subject : "Enviado de: Portfólio do Léo",
-    Body : mensagemEnviada
-}).then(
-  confirmado => {
-    if (confirmado == "OK") {
-        confirmacaoMensagemEnviada.style.display = "block";
-        botaoEnviar.style.marginTop = "10px";
-    }
-  }
-);
+    Email.send({
+        SecureToken: "92827fa9-b34d-4a62-aca2-2bcba499560f",
+        To: 'leonardorochaconstantino@gmail.com',
+        From: "leonardorochaconstantino@gmail.com",
+        Subject: "Enviado de: Portfólio do Léo",
+        Body: mensagemEnviada
+    }).then(
+        confirmado => {
+            if (confirmado == "OK") {
+                confirmacaoMensagemEnviada.style.display = "block";
+                botaoEnviar.style.marginTop = "10px";
+            }
+        }
+    );
 }
 
 botaoEnviar.addEventListener("click", (evento) => {
     evento.preventDefault();
-    enviarEmail();
+    checarInputs();
+
+    if (tudoCerto == 3) {
+        confirmacaoMensagemEnviada.innerHTML = "✅ Mensagem Enviada!";
+        enviarEmail();
+    }
 })
+
+function checarInputs() {
+    tudoCerto = 0;
+    for (const input of inputContato) {
+        if (input.value == "") {
+            confirmacaoMensagemEnviada.innerHTML = "❌ Por favor, insira as informações corretamente";
+            confirmacaoMensagemEnviada.style.display = "block";
+            botaoEnviar.style.marginTop = "10px";
+            input.style.border = "solid 2px red";
+        }
+        else {
+            tudoCerto += 1;
+        }
+
+        input.addEventListener("keyup", () => {
+            if (input.value != "") {
+                input.style.border = "solid 2px #000";
+            }
+            else {
+                input.style.border = "solid 2px red"
+            }
+        })
+    }
+}
