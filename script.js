@@ -32,8 +32,29 @@ projeto.forEach(function (itemProjeto) {
 
 // Contato -> enviar mensagem
 
+const nome = document.querySelector("#nome");
+const emailUsuario = document.querySelector("#email")
+const mensagem = document.querySelector("#mensagem");
+
+function enviarEmail() {
+
+    let mensagemEnviada = `Nome = ${nome.value}<br>E-mail = ${emailUsuario.value}<br>Mensagem = ${mensagem.value}`;
+
+Email.send({
+    SecureToken: "92827fa9-b34d-4a62-aca2-2bcba499560f",
+    To : 'leonardorochaconstantino@gmail.com',
+    From : "leonardorochaconstantino@gmail.com",
+    Subject : "Enviado de: Portfólio do Léo",
+    Body : mensagemEnviada
+}).then(
+  message => alert(message)
+);
+}
+
+
 const botaoEnviar = document.querySelector("#botao-enviar");
 
-botaoEnviar.addEventListener("click", () => {
-    alert("Mensagem enviada!")
+botaoEnviar.addEventListener("click", (evento) => {
+    evento.preventDefault();
+    enviarEmail();
 })
