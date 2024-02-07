@@ -321,6 +321,11 @@ form#entre-em-contato {
     grid-column: 1/3;
 }
 
+#confirmacao-mensagem-enviada {
+    display: none;
+    margin-top: 10px;
+}
+
 #botao-enviar {
     margin-top: 20px;
     padding: 10px 20px;

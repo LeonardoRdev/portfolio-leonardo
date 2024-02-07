@@ -32,11 +32,17 @@ projeto.forEach(function (itemProjeto) {
 
 // Contato -> enviar mensagem
 
+const confirmacaoMensagemEnviada = document.querySelector("#confirmacao-mensagem-enviada");
+const botaoEnviar = document.querySelector("#botao-enviar");
+
 const nome = document.querySelector("#nome");
 const emailUsuario = document.querySelector("#email")
 const mensagem = document.querySelector("#mensagem");
 
 function enviarEmail() {
+
+    confirmacaoMensagemEnviada.style.display = "none";
+    botaoEnviar.style.marginTop = "20px";
 
     let mensagemEnviada = `Nome = ${nome.value}<br>E-mail = ${emailUsuario.value}<br>Mensagem = ${mensagem.value}`;
 
@@ -47,12 +53,14 @@ Email.send({
     Subject : "Enviado de: Portfólio do Léo",
     Body : mensagemEnviada
 }).then(
-  message => alert(message)
+  confirmado => {
+    if (confirmado == "OK") {
+        confirmacaoMensagemEnviada.style.display = "block";
+        botaoEnviar.style.marginTop = "10px";
+    }
+  }
 );
 }
-
-
-const botaoEnviar = document.querySelector("#botao-enviar");
 
 botaoEnviar.addEventListener("click", (evento) => {
     evento.preventDefault();
