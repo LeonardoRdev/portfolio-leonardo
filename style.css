@@ -139,46 +139,57 @@ main {
 
 #sobre {
     scroll-margin-top: -35px;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-content: center;
     margin-top: 3vw;
     width: 100%;
     padding: 20vh 0;
     background-color: #ebebeb;
+    gap: 0 30px;
+}
+
+#foto-sobre {
+    display: flex;
+    justify-content: center;
+    grid-row: 1/3;
+    grid-column: 1/2;
 }
 
 #foto-sobre img {
     width: 410px;
 }
 
-
-#habilidades-sobre {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 50vw;
-    font-size: 2rem;
-    flex-wrap: nowrap;
-    padding: 20px 0 20px 30px;
+#curiosidades-sobre {
+    grid-column: 2/3;
+    width: 90%;
 }
 
 #sobre-mim-titulo {
+    text-align: center;
     font-size: 3.5rem;
     margin-bottom: 15px;
 }
 
-#curiosidades-sobre {
-    width: 100%;
+#lista-de-curiosidades {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: 8px 0;
 }
 
-#curiosidades-sobre div p {
+#lista-de-curiosidades p {
     font-size: 1.5rem;
 }
 
+#habilidades-sobre {
+    grid-column: 2/3;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2rem;
+    flex-wrap: nowrap;
+    width: 90%;
+}
 
 #habilidades-titulo {
     margin-top: 50px;
@@ -188,7 +199,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 10px 25px;
-    padding-top: 10px;
+    margin: 10px;
 }
 
 
@@ -473,8 +484,34 @@ footer {
         margin-top: 30px;
     }
 
-    #foto-sobre {
-        display: none;
+    /* Sobre */
+    #sobre {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px 0;
+    }
+
+    #foto-sobre img {
+        width: 350px;
+    }
+
+    #curiosidades-sobre {
+        width: 50%;
+        order: -1;
+        width: 75%;
+    }
+
+    #habilidades-sobre {
+        width: 70%;
+    }
+
+    #habilidades-titulo {
+        margin-top: 0;
+    }
+
+    .tecnologia img {
+        width: 4.4rem;
     }
 }
 
@@ -493,6 +530,10 @@ footer {
         font-size: 1.2rem;
     }
 
+    /* Sobre */
+    #habilidades-sobre {
+        width: 85%;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -526,6 +567,32 @@ footer {
 
     #botoes-introducao img {
         width: 45px;
+    }
+
+    /* Sobre */
+    #foto-sobre img{
+        width: 290px;
+    }
+
+    #sobre-mim-titulo {
+        font-size: 2.5rem;
+    }
+
+    #curiosidades-sobre {   
+        width: 90%;
+        padding-left: 5%;
+    }
+
+    #lista-de-curiosidades p {
+        font-size: 1.2rem;
+    }
+
+    #habilidades-titulo {
+        font-size: 1.9rem
+    }
+
+    .tecnologia img {
+        width: 4rem;
     }
 
 }
