@@ -146,7 +146,7 @@ main {
 }
 
 #foto-sobre img {
-    width: 30vw;
+    width: 410px;
 }
 
 
@@ -399,6 +399,12 @@ footer {
 
 @media only screen and (max-width: 1200px){
     
+    /* HEADER */
+    header {
+        padding: 25px 100px 25px 100px;
+    }
+
+    /* INTRODUÇÃO */
     #foto-introducao {
         padding: 15px;
     }
@@ -424,6 +430,13 @@ footer {
 
 @media only screen and (max-width: 1000px) {
 
+    /* HEADER */
+    header {
+        padding: 25px 70px 25px 100px;
+    }
+
+    /* INTRODUÇÂO */
+
     #introducao {
         text-align: center;
         flex-direction: column;
@@ -440,7 +453,6 @@ footer {
     }
 
     #botoes-introducao {
-
         background-color: #2862e9;
         width: 100%;
         margin: 20px 0;
@@ -456,45 +468,46 @@ footer {
     #foto-introducao {
         margin-top: 30px;
     }
+
+    #foto-sobre {
+        display: none;
+    }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 768px) {
 
-    #foto-introducao {
-        padding: 8px;
+    /* HEADER */
+    header {
+        padding: 25px 50px 25px 60px;
     }
 
-    #foto-introducao img {
-        width: 150px;
-    }
-
-    #texto-introducao h2 {
-        font-size: 2.2rem;
-    }
-    
-    #texto-introducao h1 {
+    a#leo {
         font-size: 1.4rem;
-        font-family: 'Honk', system-ui;
     }
-    
-    #texto-introducao p {
-        font-size: 0.8rem;
+
+    a.navegacao {
+        font-size: 1.2rem;
     }
 
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 600px) {
+
+    /* INTRODUÇÃO */
+    a.navegacao {
+        display: none;
+    }
 
     #foto-introducao img {
-        width: 100px;
+        width: 300px;
     }
 
     #texto-introducao h2 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     
     #texto-introducao h1 {
-        font-size: 1.3rem;
+        font-size: 1.7rem;
         font-family: 'Honk', system-ui;
     }
     
