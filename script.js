@@ -11,7 +11,7 @@ projeto.forEach(function (itemProjeto) {
 
         const iconesProjeto = this.querySelectorAll(".icones_para_acessar_projeto");
         iconesProjeto.forEach((itemIcone) => {
-            itemIcone.style.opacity = "100%"
+            itemIcone.style.opacity = "100%";
         })
     })
 

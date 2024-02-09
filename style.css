@@ -1,3 +1,4 @@
+/* Caixinhas de acessar projeto estão quebrando a responsividade, e tão meia feinha assim */
 html {
     scroll-behavior: smooth;
 }
@@ -35,7 +36,7 @@ a#leo {
 nav {
     display: flex;
     justify-content: flex-end;
-    gap: 30px;
+    gap: 0 30px;
 }
 
 a.navegacao {
@@ -249,14 +250,16 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 300px;
+    width: 320px;
     height: 220px;
 }
 
 .icones_para_acessar_projeto {
     transition: scale 0.1s, opacity 0.8s;
     opacity: 0;
-    width: 62px;
+    max-width: 65px;
+    width: 10vw;
+    min-width: 50px;
     border-radius: 10%;
 }
 
@@ -304,14 +307,14 @@ form#entre-em-contato {
 #informacoes-do-usuario {
     margin-top: 30px;
     height: 60vh;
-    width: 50vw;
+    width: 60vw;
     gap: 40px 25px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 5fr;
 
     padding: 20px;
-    background-color: rebeccapurple;
+    /* background-color: rebeccapurple; */
 }
 
 #informacoes-do-usuario input,
@@ -439,6 +442,11 @@ footer {
         font-size: 1rem;
     }
 
+    /* Contato */
+    #informacoes-do-usuario {
+        width: 75vw;
+    }
+
 }
 
 @media only screen and (max-width: 1000px) {
@@ -513,6 +521,12 @@ footer {
     .tecnologia img {
         width: 4.4rem;
     }
+
+    /* Contato */
+    #informacoes-do-usuario {
+        width: 90vw;
+    }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -533,6 +547,20 @@ footer {
     /* Sobre */
     #habilidades-sobre {
         width: 85%;
+    }
+
+    /* Contato */
+    #informacoes-do-usuario {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #informacoes-do-usuario input { 
+        height: 80px;
+    }
+
+    #mensagem {
+        height: 400px;
     }
 }
 
@@ -595,6 +623,10 @@ footer {
         width: 4rem;
     }
 
+    /* Contato */
+    #contato h2 {
+        font-size: 2.4em;
+    }
 }
 
 @media only screen and (max-width: 300px) {
