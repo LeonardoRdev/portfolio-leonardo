@@ -260,7 +260,9 @@ main {
     max-width: 65px;
     width: 10vw;
     min-width: 50px;
-    border-radius: 10%;
+    border-radius: 50%;
+    border: solid 2px #000;
+    background-color: #fff;
 }
 
 .icones_para_acessar_projeto:hover {
