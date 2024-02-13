@@ -257,9 +257,9 @@ main {
 .icones_para_acessar_projeto {
     transition: scale 0.1s, opacity 0.8s;
     opacity: 0;
-    max-width: 65px;
-    width: 10vw;
-    min-width: 50px;
+    max-width: 60px;
+    width: 6vw;
+    min-width: 45px;
     border-radius: 50%;
     border: solid 2px #000;
     background-color: #fff;
@@ -298,6 +298,7 @@ main {
 }
 
 #contato h2 {
+    text-align: center;
     font-size: 2.8rem;
 }
 
@@ -376,7 +377,7 @@ form#entre-em-contato {
 
 footer {
     background-color: #363636;
-    padding: 10vh 0 2vh;
+    padding: 10vh 15px 2vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -644,23 +645,54 @@ footer p {
     }
 
     /* Projetos */
+    #campo-com-projetos {
+        width: 90%;
+    }
+
     .projeto {
-        width: 290px;
-        height: 210px;
+        max-width: 380px;
+        width: 95%;
+        height: 50%;
     }
     
     .projeto .acessar-projeto {
-        width: 290px;
-        height: 210px;
+        left: 5%;
+        width: 90%;
+        height: 65vw;
+        max-height: 280px;
     }
 
     /* Contato */
     #contato h2 {
         font-size: 2.4em;
     }
+
+    /* Footer */
+    #informacoes-contato-footer p {
+        font-size: 1.2rem;
+    }
 }
 
 @media only screen and (max-width: 375px) {
+    
+    /* Introdução */
+    #foto-introducao img {
+        border: solid 8px #ebebeb;
+        width: 85%;
+    }
+
+    #texto-introducao h2 {
+        font-size: 2rem;
+    }
+    
+    #texto-introducao h1 {
+        font-size: 1.28rem;
+    }
+    
+    #texto-introducao p {
+        font-size: 0.8rem;
+    }
+
     /* Sobre */
     #habilidades-sobre {
         width: 90%;
@@ -669,10 +701,22 @@ footer p {
     .tecnologia img {
         width: 3.3rem;
     }
+
+    /* Projetos */
+    .projeto p.descricao-projeto {
+        margin-top: 5px;
+        font-size: 0.85rem;
+    }
+
+    /* Footer */
+    #informacoes-contato-footer p {
+        font-size: 1rem;
+    }
 }
 
 @media only screen and (max-width: 300px) {
 
+    /* Introdução */
     #foto-introducao img {
         border: solid 5px #ebebeb;
         width: 90%;
@@ -684,11 +728,51 @@ footer p {
     
     #texto-introducao h1 {
         font-size: 1.1rem;
-        font-family: 'Honk', system-ui;
     }
     
     #texto-introducao p {
         font-size: 0.7rem;
+    }
+
+
+    /* Projetos */
+    .icones_para_acessar_projeto {
+        max-width: 40px;
+        width: 15vw;
+        min-width: 25px;
+    }
+
+    .projeto p.descricao-projeto {
+        font-size: 0.7rem;
+    }
+
+    /* Footer */
+    #informacoes-contato-footer p {
+        font-size: 0.8rem;
+    }
+
+    #imagens-footer img {
+        width: 45px;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+
+}
+
+@media only screen and (max-width: 225px) {
+    /* Footer */
+    #informacoes-contato-footer p:first-child {
+        font-size: 0.6rem;
+    }
+
+    #imagens-footer img {
+        width: 35px;
+    }
+
+    footer p {
+        font-size: rem;
     }
 
 }
