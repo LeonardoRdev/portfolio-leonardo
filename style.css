@@ -1,4 +1,4 @@
-/* Caixinhas de acessar projeto estão quebrando a responsividade, e no celular você pode acabar clicando sem querer*/
+/* Caixinhas de acessar projeto -> no celular você pode acabar clicando sem querer */
 html {
     scroll-behavior: smooth;
 }
@@ -242,7 +242,7 @@ main {
 .projeto {
     width: 300px;
     height: 220px;
-    transition: 0.5s;
+    transition: margin-bottom 0.5s;
 }
 
 .projeto .acessar-projeto {
@@ -268,6 +268,7 @@ main {
 
 .icones_para_acessar_projeto:hover {
     scale: 1.12;
+    background-color: #bac3e8;
 }
 
 
