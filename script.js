@@ -13,6 +13,18 @@ menuHamburguer.addEventListener("click", function() {
 })
 
 
+header = document.querySelector("header");
+
+window.addEventListener("scroll", function() {
+    if(window.pageYOffset > 0) {
+        header.classList.add("sombra");
+    }
+    else {
+        header.classList.remove("sombra");
+    }
+})
+
+// Espaço
 
 // Projetos -> animação de aparecer o texto e os ícones
 

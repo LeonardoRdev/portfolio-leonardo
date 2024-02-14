@@ -23,6 +23,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 25px 150px 25px 100px;
+}
+
+.sombra {
+    transition: box-shadow 1.5s;
     box-shadow: 0 0 8px 5px #0008;
 }
 
@@ -292,7 +296,7 @@ main {
 /* Contato */
 
 #contato {
-    scroll-margin-top: -50px;
+    scroll-margin-top: -40px;
     padding: 20vh 0;
     width: 100%;
     background-color: #ebebeb;
@@ -582,6 +586,11 @@ footer p {
 @media only screen and (max-width: 600px) {
 
     /* Header */
+    header {
+        box-shadow: 0 5px 5px #0008;
+        transition: box-shadow 1s;
+    }
+
     nav {
         position: absolute;
         left: 0;
@@ -590,7 +599,6 @@ footer p {
         flex-direction: column;
         align-items: center;
         gap: 20px 0;
-        background-color: #ebebeb;
         background-color: #fff;
         transform: translateY(91px);
         padding: 25px 0;
@@ -723,6 +731,36 @@ footer p {
 
 @media only screen and (max-width: 375px) {
     
+    /* Header */
+    header {
+        padding: 25px 40px 25px 40px;
+    }
+
+    nav {
+        gap: 15px 0;
+        transform: translateY(79px);
+        padding: 25px 0;
+    }
+
+    nav a.navegacao {
+        font-size: 1.2rem;
+    }
+
+    #menu-hamburguer {
+        gap: 7px 0;
+    }
+
+    #menu-hamburguer span {
+        height: 5px;
+        width: 30px;
+    }
+
+    #menu-hamburguer::before,
+    #menu-hamburguer::after {
+        height: 5px;
+        width: 30px;
+    }
+
     /* Introdução */
     #foto-introducao img {
         border: solid 8px #ebebeb;
@@ -763,6 +801,19 @@ footer p {
 }
 
 @media only screen and (max-width: 300px) {
+
+    /* Headear */
+    header {
+        padding: 20px 30px 20px 30px;
+    }
+
+    nav {
+        transform: translateY(69px);
+    }
+
+    nav a.navegacao {
+        font-size: 1.1rem;
+    }
 
     /* Introdução */
     #foto-introducao img {
