@@ -51,6 +51,10 @@ a.navegacao:hover {
     scale: 1.1;
 }
 
+#menu-hamburguer {
+    display: none;
+}
+
 
 
 /* MAIN */
@@ -268,7 +272,6 @@ main {
 
 .icones_para_acessar_projeto:hover {
     scale: 1.12;
-    background-color: #bac3e8;
 }
 
 
@@ -581,6 +584,35 @@ footer p {
     /* Header */
     a.navegacao {
         display: none;
+    }
+
+    #menu-hamburguer {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        gap: 10px 0;
+        transition: scale 0.2s;
+    }
+
+    #menu-hamburguer:hover {
+        cursor: pointer;
+        scale: 1.1;
+    }
+
+    #menu-hamburguer span {
+        background-color: black;
+        height: 7px;
+        width: 45px;
+        border-radius: 5px;
+    }
+
+    #menu-hamburguer::before,
+    #menu-hamburguer::after {
+        content: '';
+        height: 7px;
+        width: 45px;
+        border-radius: 5px;
+        background-color: black;
     }
     
     /* INTRODUÇÃO */
