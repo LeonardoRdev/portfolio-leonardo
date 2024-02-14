@@ -1,3 +1,19 @@
+// Menu Responsivo
+
+const navBar = document.querySelector("nav");
+const menuHamburguer = document.querySelector("#menu-hamburguer");
+
+menuHamburguer.addEventListener("click", function() {
+    if (!navBar.classList.contains("sumir")) {
+        navBar.classList.add("sumir");
+    }
+    else {
+        navBar.classList.remove("sumir");
+    }
+})
+
+
+
 // Projetos -> animação de aparecer o texto e os ícones
 
 const projeto = document.querySelectorAll(".projeto");

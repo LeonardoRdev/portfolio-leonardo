@@ -582,7 +582,22 @@ footer p {
 @media only screen and (max-width: 600px) {
 
     /* Header */
-    a.navegacao {
+    nav {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px 0;
+        background-color: #ebebeb;
+        background-color: #fff;
+        transform: translateY(91px);
+        padding: 25px 0;
+        box-shadow: 0 5px 5px #0008;
+    }
+
+    .sumir {
         display: none;
     }
 
