@@ -20,9 +20,10 @@ header {
     top: 0;
     display: flex;
     background-color: #fff;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    padding: 25px 150px 25px 100px;
+    padding: 25px 70px 25px 100px;
+    gap: 0 80px;
 }
 
 .sombra {
@@ -31,6 +32,7 @@ header {
 }
 
 a#leo {
+    margin-right: auto;
     text-decoration: none;
     color: #000;
     font-size: 1.5rem;
@@ -53,6 +55,27 @@ a.navegacao {
 a.navegacao:hover {
     color: #2862e9;
     scale: 1.1;
+}
+
+#modo-escuro {
+    font-size: 1.6rem;
+    border: solid 2px #000;
+    background-color: #36363680;
+    border-radius: 10px;
+    width: 45px;
+    height: 45px;
+    display: grid;
+    place-content: center;
+}
+
+#modo-escuro:hover {
+    cursor: pointer;
+    scale: 1.1;
+}
+
+#modo-escuro.sol {
+    background-color: #fff;
+    color: #000;
 }
 
 #menu-hamburguer {

@@ -24,7 +24,24 @@ window.addEventListener("scroll", function () {
     }
 })
 
-// Espaço
+
+
+// Modo Claro / Escuro
+mudarTema = document.querySelector("#modo-escuro");
+
+mudarTema.addEventListener("click", () => {
+    if (mudarTema.classList.contains("sol")) { // se é sol, trocar pra lua:
+        mudarTema.innerHTML = `<i class="fa-solid fa-moon"></i>`;
+        mudarTema.classList.remove("sol");
+    }
+    else {
+        mudarTema.classList.add("sol");
+        mudarTema.innerHTML = `<i class="fa-solid fa-sun"></i>`;
+        console.log(mudarTema.style.backgroundColor)
+    }
+})
+
+//espaço
 
 // Projetos -> animação de aparecer o texto e os ícones
 
