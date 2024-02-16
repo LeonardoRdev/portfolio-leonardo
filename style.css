@@ -375,7 +375,7 @@ form#entre-em-contato {
 }
 
 #botao-enviar:hover {
-    cursor: pointer;
+    cursor: pointer;g
     scale: 1.05;
 }
 
@@ -729,6 +729,12 @@ footer p {
     }
 }
 
+@media only screen and (max-width: 450px) {
+    #lista-de-curiosidades p {
+        font-size: 1.1rem;
+    }    
+}
+
 @media only screen and (max-width: 375px) {
     
     /* Header */
@@ -780,6 +786,10 @@ footer p {
     }
 
     /* Sobre */
+    #lista-de-curiosidades p {
+        font-size: 0.94rem;
+    }    
+
     #habilidades-sobre {
         width: 90%;
     }
