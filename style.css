@@ -41,7 +41,7 @@ a#leo {
 
 nav {
     display: flex;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
     gap: 0 30px;
 }
 
@@ -495,7 +495,12 @@ footer p {
 
     /* HEADER */
     header {
-        padding: 25px 70px 25px 100px;
+        padding: 25px 70px 25px 60px;
+        gap: 0 50px;
+    }
+
+    #modo-escuro {
+        margin-left: auto;
     }
 
     /* INTRODUÇÂO */
@@ -586,6 +591,12 @@ footer p {
         font-size: 1.2rem;
     }
 
+    #modo-escuro {
+        width: 40px;
+        height: 40px;
+        font-size: 1.4rem;
+    }
+
     /* Sobre */
     #habilidades-sobre {
         width: 90%;
@@ -606,60 +617,68 @@ footer p {
     }
 }
 
+@media only screen and (max-width: 675px) {
+        /* Header */
+        header {
+            box-shadow: 0 5px 5px #0008;
+            transition: box-shadow 1s;
+        }
+    
+        nav {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px 0;
+            background-color: #fff;
+            transform: translateY(91px);
+            padding: 25px 0;
+            box-shadow: 0 5px 5px #0008;
+        }
+    
+        #modo-escuro {
+            margin: 0 auto;
+        }
+    
+        .sumir {
+            display: none;
+        }
+    
+        #menu-hamburguer {
+            margin-left: auto;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            gap: 10px 0;
+            transition: scale 0.2s;
+        }
+    
+        #menu-hamburguer:hover {
+            cursor: pointer;
+            scale: 1.1;
+        }
+    
+        #menu-hamburguer span {
+            background-color: black;
+            height: 7px;
+            width: 45px;
+            border-radius: 5px;
+        }
+    
+        #menu-hamburguer::before,
+        #menu-hamburguer::after {
+            content: '';
+            height: 7px;
+            width: 45px;
+            border-radius: 5px;
+            background-color: black;
+        }
+    
+}
+
 @media only screen and (max-width: 600px) {
-
-    /* Header */
-    header {
-        box-shadow: 0 5px 5px #0008;
-        transition: box-shadow 1s;
-    }
-
-    nav {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px 0;
-        background-color: #fff;
-        transform: translateY(91px);
-        padding: 25px 0;
-        box-shadow: 0 5px 5px #0008;
-    }
-
-    .sumir {
-        display: none;
-    }
-
-    #menu-hamburguer {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        gap: 10px 0;
-        transition: scale 0.2s;
-    }
-
-    #menu-hamburguer:hover {
-        cursor: pointer;
-        scale: 1.1;
-    }
-
-    #menu-hamburguer span {
-        background-color: black;
-        height: 7px;
-        width: 45px;
-        border-radius: 5px;
-    }
-
-    #menu-hamburguer::before,
-    #menu-hamburguer::after {
-        content: '';
-        height: 7px;
-        width: 45px;
-        border-radius: 5px;
-        background-color: black;
-    }
 
     /* INTRODUÇÃO */
     #foto-introducao img {
@@ -753,16 +772,11 @@ footer p {
 }
 
 @media only screen and (max-width: 450px) {
-    #lista-de-curiosidades p {
-        font-size: 1.1rem;
-    }
-}
-
-@media only screen and (max-width: 375px) {
 
     /* Header */
     header {
         padding: 25px 40px 25px 40px;
+        gap: 0 15px;
     }
 
     nav {
@@ -772,6 +786,12 @@ footer p {
     }
 
     nav a.navegacao {
+        font-size: 1.2rem;
+    }
+
+    #modo-escuro {
+        width: 35px;
+        height: 35px;
         font-size: 1.2rem;
     }
 
@@ -789,6 +809,14 @@ footer p {
         height: 5px;
         width: 30px;
     }
+
+    /* Sobre */
+    #lista-de-curiosidades p {
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width: 375px) {
 
     /* Introdução */
     #foto-introducao img {
