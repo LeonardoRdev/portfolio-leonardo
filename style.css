@@ -432,8 +432,8 @@ footer p {
 
 /* Responsividade */
 
-@media only screen and (max-width: 1200px){
-    
+@media only screen and (max-width: 1200px) {
+
     /* HEADER */
     header {
         padding: 25px 100px 25px 100px;
@@ -451,12 +451,12 @@ footer p {
     #texto-introducao h2 {
         font-size: 3.0rem;
     }
-    
+
     #texto-introducao h1 {
         font-size: 1.9rem;
         font-family: 'Honk', system-ui;
     }
-    
+
     #texto-introducao p {
         font-size: 1rem;
     }
@@ -574,7 +574,7 @@ footer p {
         flex-direction: column;
     }
 
-    #informacoes-do-usuario input { 
+    #informacoes-do-usuario input {
         height: 80px;
     }
 
@@ -637,7 +637,7 @@ footer p {
         border-radius: 5px;
         background-color: black;
     }
-    
+
     /* INTRODUÇÃO */
     #foto-introducao img {
         width: 300px;
@@ -646,12 +646,12 @@ footer p {
     #texto-introducao h2 {
         font-size: 2.5rem;
     }
-    
+
     #texto-introducao h1 {
         font-size: 1.7rem;
         font-family: 'Honk', system-ui;
     }
-    
+
     #descricao-introducao p {
         font-size: 1rem;
     }
@@ -665,7 +665,7 @@ footer p {
     }
 
     /* Sobre */
-    #foto-sobre img{
+    #foto-sobre img {
         width: 55%;
     }
 
@@ -673,7 +673,7 @@ footer p {
         font-size: 2.5rem;
     }
 
-    #curiosidades-sobre {   
+    #curiosidades-sobre {
         width: 90%;
         padding-left: 5%;
     }
@@ -710,7 +710,7 @@ footer p {
         width: 95%;
         height: 50%;
     }
-    
+
     .projeto .acessar-projeto {
         left: 5%;
         width: 90%;
@@ -732,11 +732,11 @@ footer p {
 @media only screen and (max-width: 450px) {
     #lista-de-curiosidades p {
         font-size: 1.1rem;
-    }    
+    }
 }
 
 @media only screen and (max-width: 375px) {
-    
+
     /* Header */
     header {
         padding: 25px 40px 25px 40px;
@@ -776,11 +776,11 @@ footer p {
     #texto-introducao h2 {
         font-size: 2rem;
     }
-    
+
     #texto-introducao h1 {
         font-size: 1.28rem;
     }
-    
+
     #texto-introducao p {
         font-size: 0.8rem;
     }
@@ -788,7 +788,7 @@ footer p {
     /* Sobre */
     #lista-de-curiosidades p {
         font-size: 0.94rem;
-    }    
+    }
 
     #habilidades-sobre {
         width: 90%;
@@ -834,11 +834,11 @@ footer p {
     #texto-introducao h2 {
         font-size: 1.8rem;
     }
-    
+
     #texto-introducao h1 {
         font-size: 1.1rem;
     }
-    
+
     #texto-introducao p {
         font-size: 0.7rem;
     }
@@ -871,6 +871,7 @@ footer p {
 }
 
 @media only screen and (max-width: 225px) {
+
     /* Footer */
     #informacoes-contato-footer p:first-child {
         font-size: 0.6rem;

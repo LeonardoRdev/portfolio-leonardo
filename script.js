@@ -3,7 +3,7 @@
 const navBar = document.querySelector("nav");
 const menuHamburguer = document.querySelector("#menu-hamburguer");
 
-menuHamburguer.addEventListener("click", function() {
+menuHamburguer.addEventListener("click", function () {
     if (!navBar.classList.contains("sumir")) {
         navBar.classList.add("sumir");
     }
@@ -15,8 +15,8 @@ menuHamburguer.addEventListener("click", function() {
 
 header = document.querySelector("header");
 
-window.addEventListener("scroll", function() {
-    if(window.pageYOffset > 0) {
+window.addEventListener("scroll", function () {
+    if (window.pageYOffset > 0) {
         header.classList.add("sombra");
     }
     else {
