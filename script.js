@@ -27,17 +27,41 @@ window.addEventListener("scroll", function () {
 
 
 // Modo Claro / Escuro
+corpo = document.querySelector("body");
+header = document.querySelector("header");
+todosParagrafos = document.querySelectorAll("p");
+todasTagsA = document.querySelectorAll("a");
+
+
 mudarTema = document.querySelector("#modo-escuro");
 
 mudarTema.addEventListener("click", () => {
-    if (mudarTema.classList.contains("sol")) { // se é sol, trocar pra lua:
+    if (mudarTema.classList.contains("sol")) { // SOL:
         mudarTema.innerHTML = `<i class="fa-solid fa-moon"></i>`;
         mudarTema.classList.remove("sol");
+
+        corpo.style.backgroundColor = "#fff";
+        header.style.backgroundColor = "#fff";
+        todosParagrafos.forEach(function(paragrafo) {
+            paragrafo.style.color = "#000";
+        })
+        todasTagsA.forEach(function(tagA) {
+            tagA.style.color = "000";
+        })
     }
     else {
-        mudarTema.classList.add("sol");
+        mudarTema.classList.add("sol"); // LUA
         mudarTema.innerHTML = `<i class="fa-solid fa-sun"></i>`;
-        console.log(mudarTema.style.backgroundColor)
+        
+        corpo.style.backgroundColor = "#333";
+        header.style.backgroundColor = "#222";
+
+        todosParagrafos.forEach(function(paragrafo) {
+            paragrafo.style.color = "#fff";
+        })
+        todasTagsA.forEach(function(tagA) {
+            tagA.style.color = "#fff";
+        })
     }
 })
 
