@@ -29,54 +29,88 @@ window.addEventListener("scroll", function () {
 // Modo Claro / Escuro
 corpo = document.querySelector("body");
 header = document.querySelector("header");
+sobre = document.querySelector("#sobre");
+contato = document.querySelector("#contato");
+footer = document.querySelector("footer")
+todosPlanosDeFundo = [corpo, header, sobre, contato, footer];
+
 todosParagrafos = document.querySelectorAll("p");
 todasTagsA = document.querySelectorAll("a");
+todosH1 = document.querySelectorAll("h1");
+todosH2 = document.querySelectorAll("h2");
+todosH3 = document.querySelectorAll("h3");
+todosTextos = [todosParagrafos, todasTagsA, todosH1, todosH2, todosH3];
 
+TodosParagrafosFooter = document.querySelectorAll("footer p");
 
 mudarTema = document.querySelector("#modo-escuro");
 
 mudarTema.addEventListener("click", () => {
-    if (mudarTema.classList.contains("sol")) { // SOL:
+    // SOL
+    if (mudarTema.classList.contains("sol")) {
         mudarTema.innerHTML = `<i class="fa-solid fa-moon"></i>`;
         mudarTema.classList.remove("sol");
 
-        corpo.style.backgroundColor = "#fff";
-        header.style.backgroundColor = "#fff";
-        todosParagrafos.forEach(function(paragrafo) {
-            paragrafo.style.color = "#000";
+        todosPlanosDeFundo.forEach(function(fundo) {
+            if (fundo.id === "sobre" || fundo.id === "contato") {
+                fundo.style.backgroundColor = "#ebebeb";
+                return;
+            }
+            else if (fundo.tagName === "FOOTER") {
+                fundo.style.backgroundColor = "#363636";
+                return;
+            }
+            fundo.style.backgroundColor = "#fff";
         })
-        todasTagsA.forEach(function(tagA) {
-            tagA.style.color = "000";
+
+        todosTextos.forEach(function(tagTexto) {
+            tagTexto.forEach(function(texto) {
+                texto.style.color = "#000";
+            })
         })
+
+        TodosParagrafosFooter.forEach(function(paragrafoFooter) {
+            paragrafoFooter.style.color = "#fff";
+        })
+
     }
+
+    // LUA
     else {
-        mudarTema.classList.add("sol"); // LUA
+        mudarTema.classList.add("sol");
         mudarTema.innerHTML = `<i class="fa-solid fa-sun"></i>`;
         
-        corpo.style.backgroundColor = "#333";
-        header.style.backgroundColor = "#222";
+        todosPlanosDeFundo.forEach(function(fundo) {
+            fundo.style.transition = "background-color 0.6s";
+            if (fundo.id === "sobre" || fundo.id === "contato") {
+                fundo.style.backgroundColor = "#333";
+                return;
+            }
+            fundo.style.backgroundColor = "#222";
+        })
 
-        todosParagrafos.forEach(function(paragrafo) {
-            paragrafo.style.color = "#fff";
+        todosTextos.forEach(function(tagTexto) {
+            tagTexto.forEach(function(texto) {
+                texto.style.transition = "color 0.8s";
+                texto.style.color = "#fff";
+            })
         })
-        todasTagsA.forEach(function(tagA) {
-            tagA.style.color = "#fff";
-        })
+
     }
 })
 
 //espaço
 
-// Projetos -> animação de aparecer o texto e os ícones
+// Projetos -> animação de aparecer o texto (descricaoProjeto) e os ícones
 
 const projeto = document.querySelectorAll(".projeto");
 
 projeto.forEach(function (itemProjeto) {
     itemProjeto.addEventListener("mouseover", function () {
-        const texto = this.querySelector("p.descricao-projeto");
+        const descricaoProjeto = this.querySelector("p.descricao-projeto");
 
         this.style.marginBottom = "100px";
-        texto.style.opacity = "100%";
+        descricaoProjeto.style.opacity = "100%";
 
         const iconesProjeto = this.querySelectorAll(".icones_para_acessar_projeto");
         iconesProjeto.forEach((itemIcone) => {
@@ -85,9 +119,9 @@ projeto.forEach(function (itemProjeto) {
     })
 
     itemProjeto.addEventListener("mouseout", function () {
-        const texto = this.querySelector("p.descricao-projeto");
+        const descricaoProjeto = this.querySelector("p.descricao-projeto");
 
-        texto.style.opacity = "0";
+        descricaoProjeto.style.opacity = "0";
         this.style.marginBottom = "0";
 
         const iconesProjeto = this.querySelectorAll(".icones_para_acessar_projeto");
