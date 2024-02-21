@@ -72,6 +72,8 @@ mudarTema.addEventListener("click", () => {
         TodosParagrafosFooter.forEach(function(paragrafoFooter) {
             paragrafoFooter.style.color = "#fff";
         })
+
+        menuHamburguer.style.color = "#000";
     }
 
     // LUA
@@ -94,7 +96,7 @@ mudarTema.addEventListener("click", () => {
                 texto.style.color = "#fff";
             })
         })
-
+        menuHamburguer.style.color = "#fff";
     }
 })
 

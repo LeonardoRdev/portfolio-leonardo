@@ -655,7 +655,8 @@ footer p {
             flex-direction: column;
             position: relative;
             gap: 10px 0;
-            transition: scale 0.2s;
+            transition: scale 0.2s, color 0.8s;
+            color: #000;
         }
     
         #menu-hamburguer:hover {
@@ -664,7 +665,7 @@ footer p {
         }
     
         #menu-hamburguer span {
-            background-color: #000;
+            background-color: currentColor;
             height: 7px;
             width: 45px;
             border-radius: 5px;
@@ -676,7 +677,7 @@ footer p {
             height: 7px;
             width: 45px;
             border-radius: 5px;
-            background-color: #000;
+            background-color: currentColor;
         }
     
 }
