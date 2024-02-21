@@ -13,6 +13,7 @@ menuHamburguer.addEventListener("click", function () {
 })
 
 
+// Sombra no header ao Scrollar
 header = document.querySelector("header");
 
 window.addEventListener("scroll", function () {
@@ -28,11 +29,10 @@ window.addEventListener("scroll", function () {
 
 // Modo Claro / Escuro
 corpo = document.querySelector("body");
-header = document.querySelector("header");
 sobre = document.querySelector("#sobre");
 contato = document.querySelector("#contato");
 footer = document.querySelector("footer")
-todosPlanosDeFundo = [corpo, header, sobre, contato, footer];
+todosPlanosDeFundo = [corpo, header, navBar, sobre, contato, footer];
 
 todosParagrafos = document.querySelectorAll("p");
 todasTagsA = document.querySelectorAll("a");
@@ -72,7 +72,6 @@ mudarTema.addEventListener("click", () => {
         TodosParagrafosFooter.forEach(function(paragrafoFooter) {
             paragrafoFooter.style.color = "#fff";
         })
-
     }
 
     // LUA
@@ -81,7 +80,7 @@ mudarTema.addEventListener("click", () => {
         mudarTema.innerHTML = `<i class="fa-solid fa-sun"></i>`;
         
         todosPlanosDeFundo.forEach(function(fundo) {
-            fundo.style.transition = "background-color 0.6s";
+            fundo.style.transition = "background-color 0.6s, box-shadow 1.5s";
             if (fundo.id === "sobre" || fundo.id === "contato") {
                 fundo.style.backgroundColor = "#333";
                 return;

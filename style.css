@@ -29,6 +29,7 @@ header {
 .sombra {
     transition: box-shadow 1.5s;
     box-shadow: 0 0 8px 5px #0008;
+    box-shadow: 0 0 8px 5px #000;
 }
 
 a#leo {
@@ -41,8 +42,9 @@ a#leo {
 
 nav {
     display: flex;
-    /* justify-content: flex-end; */
     gap: 0 30px;
+    background-color: #fff;
+    /* justify-content: flex-end; */
 }
 
 a.navegacao {
@@ -153,6 +155,7 @@ main {
 
 .redes-sociais-botoes a img {
     width: 50px;
+    background-color: #fff;
     border: solid 2px #000;
     border-radius: 100%;
     padding: 3px;
@@ -305,7 +308,8 @@ main {
 .capa-do-projeto {
     width: 100%;
     height: 100%;
-    border-radius: 5px;
+    border-radius: 3px;
+    border: solid 3px #000;
 }
 
 .projeto p.descricao-projeto {
@@ -632,7 +636,6 @@ footer p {
             flex-direction: column;
             align-items: center;
             gap: 20px 0;
-            background-color: #fff;
             transform: translateY(91px);
             padding: 25px 0;
             box-shadow: 0 5px 5px #0008;
@@ -661,7 +664,7 @@ footer p {
         }
     
         #menu-hamburguer span {
-            background-color: black;
+            background-color: #000;
             height: 7px;
             width: 45px;
             border-radius: 5px;
@@ -673,7 +676,7 @@ footer p {
             height: 7px;
             width: 45px;
             border-radius: 5px;
-            background-color: black;
+            background-color: #000;
         }
     
 }
