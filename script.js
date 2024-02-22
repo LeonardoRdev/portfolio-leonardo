@@ -74,6 +74,7 @@ mudarTema.addEventListener("click", () => {
         })
 
         menuHamburguer.style.color = "#000";
+        header.style.color = "#0008";
     }
 
     // LUA
@@ -97,6 +98,7 @@ mudarTema.addEventListener("click", () => {
             })
         })
         menuHamburguer.style.color = "#fff";
+        header.style.color = "#000";
     }
 })
 
