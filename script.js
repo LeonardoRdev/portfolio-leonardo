@@ -75,6 +75,7 @@ mudarTema.addEventListener("click", () => {
 
         menuHamburguer.style.color = "#000";
         header.style.color = "#0008";
+        document.querySelector("#foto-introducao img").style.borderColor = "#ebebeb";
     }
 
     // LUA
@@ -99,6 +100,7 @@ mudarTema.addEventListener("click", () => {
         })
         menuHamburguer.style.color = "#fff";
         header.style.color = "#000";
+        document.querySelector("#foto-introducao img").style.borderColor = "#555";
     }
 })
 
