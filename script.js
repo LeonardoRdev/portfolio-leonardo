@@ -46,7 +46,7 @@ TodosParagrafosFooter = document.querySelectorAll("footer p");
 mudarTema = document.querySelector("#modo-escuro");
 
 mudarTema.addEventListener("click", () => {
-    // SOL
+    // SOL | Claro
     if (mudarTema.classList.contains("sol")) {
         mudarTema.innerHTML = `<i class="fa-solid fa-moon"></i>`;
         mudarTema.classList.remove("sol");
@@ -78,7 +78,7 @@ mudarTema.addEventListener("click", () => {
         document.querySelector("#foto-introducao img").style.borderColor = "#ebebeb";
     }
 
-    // LUA
+    // LUA | Escuro
     else {
         mudarTema.classList.add("sol");
         mudarTema.innerHTML = `<i class="fa-solid fa-sun"></i>`;
@@ -104,7 +104,7 @@ mudarTema.addEventListener("click", () => {
     }
 })
 
-//espaço
+
 
 // Projetos -> animação de aparecer o texto (descricaoProjeto) e os ícones
 

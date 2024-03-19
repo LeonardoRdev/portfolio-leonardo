@@ -44,7 +44,6 @@ nav {
     display: flex;
     gap: 0 30px;
     background-color: #fff;
-    /* justify-content: flex-end; */
 }
 
 a.navegacao {
