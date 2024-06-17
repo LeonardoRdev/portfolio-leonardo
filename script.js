@@ -13,7 +13,8 @@ menuHamburguer.addEventListener("click", function () {
 })
 
 
-// Sombra no header ao Scrollar
+
+// Sombra no Header ao Scrollar
 header = document.querySelector("header");
 
 window.addEventListener("scroll", function () {
@@ -46,7 +47,7 @@ TodosParagrafosFooter = document.querySelectorAll("footer p");
 mudarTema = document.querySelector("#modo-escuro");
 
 mudarTema.addEventListener("click", () => {
-    // SOL | Claro
+    // SOL / Claro
     if (mudarTema.classList.contains("sol")) {
         mudarTema.innerHTML = `<i class="fa-solid fa-moon"></i>`;
         mudarTema.classList.remove("sol");
@@ -78,7 +79,7 @@ mudarTema.addEventListener("click", () => {
         document.querySelector("#foto-introducao img").style.borderColor = "#ebebeb";
     }
 
-    // LUA | Escuro
+    // LUA / Escuro
     else {
         mudarTema.classList.add("sol");
         mudarTema.innerHTML = `<i class="fa-solid fa-sun"></i>`;
@@ -106,8 +107,7 @@ mudarTema.addEventListener("click", () => {
 
 
 
-// Projetos -> animação de aparecer o texto (descricaoProjeto) e os ícones
-
+// Projetos - Animação de aparecer o texto da "descricaoProjeto" e os ícones para acessá-los.
 const projeto = document.querySelectorAll(".projeto");
 
 projeto.forEach(function (itemProjeto) {
@@ -138,8 +138,7 @@ projeto.forEach(function (itemProjeto) {
 
 
 
-// Contato -> enviar mensagem
-
+// Contato - Enviar mensagem
 tudoCerto = 0;
 
 const confirmacaoMensagemEnviada = document.querySelector("#confirmacao-mensagem-enviada");
