@@ -1,5 +1,19 @@
-/* Animação */
+/* Caixinhas de acessar projeto -> no celular você pode acabar clicando sem querer (faz aparecer os icones direto, sem precisar clicar em cima (quando no mobile)) */
 
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+
+/* Animações */
 @keyframes slideRight {
     0% {
         opacity: 25%;
@@ -30,7 +44,7 @@
     }
 }
 
-/* Classe para aplicar à elementos */
+
 .slideRight {
     animation: slideRight 2s;
 }
@@ -39,17 +53,15 @@
     animation: slideLeft 2s;
 }
 
-/* Caixinhas de acessar projeto -> no celular você pode acabar clicando sem querer */
-html {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
+.esconder {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s, transform 1.5s;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
+.mostrar {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
@@ -322,7 +334,7 @@ main {
 .projeto {
     width: 300px;
     height: 220px;
-    transition: margin-bottom 0.5s;
+    transition: opacity 1.5s, transform 1.5s, margin-bottom 0.5s;
 }
 
 .projeto .acessar-projeto {
@@ -505,6 +517,10 @@ footer p {
 
 
 
+
+
+
+
 /* Responsividade */
 
 @media only screen and (max-width: 1200px) {
@@ -544,6 +560,11 @@ footer p {
 }
 
 @media only screen and (max-width: 1000px) {
+
+    /* Animações (aumenta a velocidade) */
+    .esconder {
+        transition: opacity 1s, transform 1s;
+    }
 
     /* HEADER */
     header {

@@ -28,6 +28,24 @@ window.addEventListener("scroll", function () {
 
 
 
+// Animação ao aparecer o elemento na tela
+const observer = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+
+        if (entrada.isIntersecting) {
+            console.log("está")
+            entrada.target.classList.add("mostrar");
+        }
+    })
+})
+
+const elementosEscondidos = document.querySelectorAll(".esconder");
+elementosEscondidos.forEach((elemento) => {
+    observer.observe(elemento);
+})
+
+
+
 // Modo Claro / Escuro
 corpo = document.querySelector("body");
 sobre = document.querySelector("#sobre");
