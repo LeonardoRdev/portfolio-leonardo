@@ -675,6 +675,16 @@ footer p {
         width: 90%;
     }
 
+    /* Projetos */
+    .descricao-projeto {
+        opacity: 100%;
+    }
+
+    .icones_para_acessar_projeto {
+        opacity: 100%;
+    }
+
+
     /* Contato */
     #informacoes-do-usuario {
         display: flex;

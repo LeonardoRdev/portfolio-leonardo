@@ -33,7 +33,6 @@ const observer = new IntersectionObserver((entradas) => {
     entradas.forEach((entrada) => {
 
         if (entrada.isIntersecting) {
-            console.log("está")
             entrada.target.classList.add("mostrar");
         }
     })
@@ -126,6 +125,7 @@ mudarTema.addEventListener("click", () => {
 
 
 // Projetos - Animação de aparecer o texto da "descricaoProjeto" e os ícones para acessá-los.
+
 const projeto = document.querySelectorAll(".projeto");
 
 projeto.forEach(function (itemProjeto) {
@@ -138,22 +138,47 @@ projeto.forEach(function (itemProjeto) {
         const iconesProjeto = this.querySelectorAll(".icones_para_acessar_projeto");
         iconesProjeto.forEach((itemIcone) => {
             itemIcone.style.opacity = "100%";
-        })
+        });
     })
 
     itemProjeto.addEventListener("mouseout", function () {
-        const descricaoProjeto = this.querySelector("p.descricao-projeto");
+        if (window.innerWidth > 768) {
 
-        descricaoProjeto.style.opacity = "0";
-        this.style.marginBottom = "0";
-
-        const iconesProjeto = this.querySelectorAll(".icones_para_acessar_projeto");
-        iconesProjeto.forEach((itemIcone) => {
-            itemIcone.style.opacity = "0";
-        })
+            const descricaoProjeto = this.querySelector("p.descricao-projeto");
+            
+            descricaoProjeto.style.opacity = "0";
+            this.style.marginBottom = "0";
+            
+            const iconesProjeto = this.querySelectorAll(".icones_para_acessar_projeto");
+            iconesProjeto.forEach((itemIcone) => {
+                itemIcone.style.opacity = "0";
+            });
+        }
+        else {
+            // exibirTodasDescricoesProjetos();g
+        }
     })
 })
 
+exibirTodasDescricoesProjetos();
+
+function exibirTodasDescricoesProjetos() {
+    // alert("função iniciada")
+
+    projeto.forEach(function (itemProjeto) {
+        itemProjeto.addEventListener("mouseover", function () {
+            const descricaoProjeto = this.querySelector(".descricao-projeto");
+    
+            itemProjeto.style.marginBottom = "100px";
+            descricaoProjeto.style.opacity = "100%";
+    
+            const iconesProjeto = this.querySelectorAll(".icones_para_acessar_projeto");
+            iconesProjeto.forEach((itemIcone) => {
+                itemIcone.style.opacity = "100%";
+            });
+        });
+    });
+}
 
 
 // Contato - Enviar mensagem
